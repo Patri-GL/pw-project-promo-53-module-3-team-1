@@ -1,8 +1,63 @@
 import "../styles/App.scss";
 import imgAdalab from "../images/adalab.png";
 import imgLaptop from "../images/laptop-code-solid.svg";
+import { useState } from "react";
 
 function App() {
+  //   const [projectData, setProjectData] = useState({
+  //   nameProject: "Elegant Workspace",
+  //   sloganProject: "Diseños Exclusivos",
+  //   repoProject: "http://localhost:5173/#",
+  //   demoProject: "http://localhost:5173/#",
+  //   technologies: "React JS - HTML - CSS",
+  //   descProject: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione",
+  //   authorProject: "Emmelie Bjôrklund",
+  //   jobProject: "Full stack Developer"
+  // });
+  const [nameProject, setNameProject] = useState("Elegant Workspace");
+  const [sloganProject, setSloganProject] = useState("Diseños Exclusivos");
+  const [repoProject, setRepoProject] = useState("http://localhost:5173/#");
+  const [demoProject, setDemoProject] = useState("http://localhost:5173/#");
+  const [technologies, setTechnologies] = useState("React JS - HTML - CSS");
+  const [descProject, setDescProject] = useState(
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione"
+  );
+  const [authorProject, setAuthorProject] = useState("Emmelie Bjôrklund");
+  const [jobProject, setJobProject] = useState("Full stack Developer");
+
+  //   const handleInputChange = (eve) => {
+  //   const { name, value } = eve.target;
+  //   setProjectData(prevState => ({
+  //     ...prevState,
+  //     [name]: value
+  //   }));
+  // };
+
+  const handleInputNameProject = (eve) => {
+    setNameProject(eve.target.value);
+  };
+  const handleInputSloganProject = (eve) => {
+    setSloganProject(eve.target.value);
+  };
+  const handleInputRepoProject = (eve) => {
+    setRepoProject(eve.target.value);
+  };
+  const handleInputDemoProject = (eve) => {
+    setDemoProject(eve.target.value);
+  };
+  const handleInputTechnologies = (eve) => {
+    setTechnologies(eve.target.value);
+  };
+  const handleInputDescProject = (eve) => {
+    setDescProject(eve.target.value);
+  };
+  const handleInputAuthorProject = (eve) => {
+    setAuthorProject(eve.target.value);
+  };
+  const handleInputJobProject = (eve) => {
+    setJobProject(eve.target.value);
+  };
+  //para añadir imágenes: https://github.com/Adalab/componente-react-de-foto-de-perfil
   return (
     <>
       <div className="container">
@@ -44,33 +99,29 @@ function App() {
 
               <div className="card__author">
                 <div className="card__authorPhoto"></div>
-                <p className="card__job">Full stack Developer</p>
-                <h3 className="card__name">Emmelie Bjôrklund</h3>
+                <p className="card__job">{jobProject}</p>
+                <h3 className="card__name">{authorProject}</h3>
               </div>
 
               <div className="card__project">
-                <h3 className="card__name">Elegant Workspace</h3>
-                <p className="card__slogan">Diseños Exclusivos</p>
+                <h3 className="card__name">{nameProject}</h3>
+                <p className="card__slogan">{sloganProject}</p>
                 <h3 className="card__descriptionTitle">Product description</h3>
-                <p className="card__description">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Nulla, quos? Itaque, molestias eveniet laudantium adipisci
-                  vitae ratione
-                </p>
+                <p className="card__description">{descProject}</p>
 
                 <div className="card__technicalInfo">
-                  <p className="card__technologies">React JS - HTML - CSS</p>
+                  <p className="card__technologies">{technologies}</p>
 
                   <a
                     className="icon icon__www"
-                    href="#"
+                    href={demoProject}
                     title="Haz click para ver el proyecto online"
                   >
                     Web link
                   </a>
                   <a
                     className="icon icon__github"
-                    href="#"
+                    href={repoProject}
                     title="Haz click para ver el código del proyecto"
                   >
                     GitHub link
@@ -91,6 +142,7 @@ function App() {
                 name="name"
                 id="name"
                 placeholder="Nombre del proyecto"
+                onInput={handleInputNameProject}
               />
               <input
                 className="addForm__input"
@@ -98,6 +150,7 @@ function App() {
                 name="slogan"
                 id="slogan"
                 placeholder="Slogan"
+                onInput={handleInputSloganProject}
               />
               <div className="addForm__2col">
                 <input
@@ -106,6 +159,7 @@ function App() {
                   name="repo"
                   id="repo"
                   placeholder="Repositorio"
+                  onInput={handleInputRepoProject}
                 />
                 <input
                   className="addForm__input"
@@ -113,6 +167,7 @@ function App() {
                   name="demo"
                   id="demo"
                   placeholder="Demo"
+                  onInput={handleInputDemoProject}
                 />
               </div>
               <input
@@ -121,6 +176,7 @@ function App() {
                 name="technologies"
                 id="technologies"
                 placeholder="Tecnologías"
+                onInput={handleInputTechnologies}
               />
               <textarea
                 className="addForm__input"
@@ -129,6 +185,7 @@ function App() {
                 id="desc"
                 placeholder="Descripción"
                 rows="5"
+                onInput={handleInputDescProject}
               ></textarea>
             </fieldset>
 
@@ -142,6 +199,7 @@ function App() {
                 name="autor"
                 id="autor"
                 placeholder="Nombre"
+                onInput={handleInputAuthorProject}
               />
               <input
                 className="addForm__input"
@@ -149,6 +207,7 @@ function App() {
                 name="job"
                 id="job"
                 placeholder="Trabajo"
+                onInput={handleInputJobProject}
               />
             </fieldset>
 
