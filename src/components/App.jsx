@@ -28,37 +28,26 @@ function App() {
   const [authorProject, setAuthorProject] = useState("Emmelie Bjôrklund");
   const [jobProject, setJobProject] = useState("Full stack Developer");
 
-  //   const handleInputChange = (eve) => {
-  //   const { name, value } = eve.target;
-  //   setProjectData(prevState => ({
-  //     ...prevState,
-  //     [name]: value
-  //   }));
-  // };
+  const changeState = (field, value) => {
+    console.log("changestate(", field, value, ")");
 
-  const handleInputNameProject = (eve) => {
-    setNameProject(eve.target.value);
-  };
-  const handleInputSloganProject = (eve) => {
-    setSloganProject(eve.target.value);
-  };
-  const handleInputRepoProject = (eve) => {
-    setRepoProject(eve.target.value);
-  };
-  const handleInputDemoProject = (eve) => {
-    setDemoProject(eve.target.value);
-  };
-  const handleInputTechnologies = (eve) => {
-    setTechnologies(eve.target.value);
-  };
-  const handleInputDescProject = (eve) => {
-    setDescProject(eve.target.value);
-  };
-  const handleInputAuthorProject = (eve) => {
-    setAuthorProject(eve.target.value);
-  };
-  const handleInputJobProject = (eve) => {
-    setJobProject(eve.target.value);
+    if (field === "name") {
+      setNameProject(value);
+    } else if (field === "slogan") {
+      setSloganProject(value);
+    } else if (field === "repo") {
+      setRepoProject(value);
+    } else if (field === "demo") {
+      setDemoProject(value);
+    } else if (field === "technologies") {
+      setTechnologies(value);
+    } else if (field === "desc") {
+      setDescProject(value);
+    } else if (field === "autor") {
+      setAuthorProject(value);
+    } else if (field === "job") {
+      setJobProject(value);
+    }
   };
   //para añadir imágenes: https://github.com/Adalab/componente-react-de-foto-de-perfil
   return (
@@ -79,21 +68,11 @@ function App() {
             authorProject={authorProject}
             jobProject={jobProject}
           />
-          <Form
-            handleInputNameProject={handleInputNameProject}
-            handleInputSloganProject={handleInputSloganProject}
-            handleInputRepoProject={handleInputRepoProject}
-            handleInputDemoProject={handleInputDemoProject}
-            handleInputTechnologies={handleInputTechnologies}
-            handleInputDescProject={handleInputDescProject}
-            handleInputAuthorProject={handleInputAuthorProject}
-            handleInputJobProject={handleInputJobProject}
-          />
+          <Form changeState={changeState} />
         </main>
         <Footer />
       </div>
     </>
   );
 }
-
 export default App;

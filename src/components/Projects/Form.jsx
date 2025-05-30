@@ -1,4 +1,11 @@
 function Form(props) {
+  const handleInput = (ev) => {
+    const field = ev.target.id;
+    const value = ev.target.value;
+
+    props.changeState(field, value);
+  };
+
   return (
     <>
       <form className="addForm">
@@ -13,7 +20,7 @@ function Form(props) {
             name="name"
             id="name"
             placeholder="Nombre del proyecto"
-            onInput={props.handleInputNameProject}
+            onInput={handleInput}
           />
           <input
             className="addForm__input"
@@ -21,7 +28,7 @@ function Form(props) {
             name="slogan"
             id="slogan"
             placeholder="Slogan"
-            onInput={props.handleInputSloganProject}
+            onInput={handleInput}
           />
           <div className="addForm__2col">
             <input
@@ -30,7 +37,7 @@ function Form(props) {
               name="repo"
               id="repo"
               placeholder="Repositorio"
-              onInput={props.handleInputRepoProject}
+              onInput={handleInput}
             />
             <input
               className="addForm__input"
@@ -38,7 +45,7 @@ function Form(props) {
               name="demo"
               id="demo"
               placeholder="Demo"
-              onInput={props.handleInputDemoProject}
+              onInput={handleInput}
             />
           </div>
           <input
@@ -47,7 +54,7 @@ function Form(props) {
             name="technologies"
             id="technologies"
             placeholder="Tecnologías"
-            onInput={props.handleInputTechnologies}
+            onInput={handleInput}
           />
           <textarea
             className="addForm__input"
@@ -56,7 +63,7 @@ function Form(props) {
             id="desc"
             placeholder="Descripción"
             rows="5"
-            onInput={props.handleInputDescProject}
+            onInput={handleInput}
           ></textarea>
         </fieldset>
 
@@ -68,7 +75,7 @@ function Form(props) {
             name="autor"
             id="autor"
             placeholder="Nombre"
-            onInput={props.handleInputAuthorProject}
+            onInput={handleInput}
           />
           <input
             className="addForm__input"
@@ -76,7 +83,7 @@ function Form(props) {
             name="job"
             id="job"
             placeholder="Trabajo"
-            onInput={props.handleInputJobProject}
+            onInput={handleInput}
           />
         </fieldset>
 
