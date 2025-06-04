@@ -10,29 +10,29 @@ function Preview(props) {
 
         <div className="card__author">
           <div className="card__authorPhoto"></div>
-          <p className="card__job">{props.jobProject}</p>
-          <h3 className="card__name">{props.authorProject}</h3>
+          <p className="card__job">{props.job}</p>
+          <h3 className="card__name">{props.author}</h3>
         </div>
 
         <div className="card__project">
-          <h3 className="card__name">{props.nameProject}</h3>
-          <p className="card__slogan">{props.sloganProject}</p>
+          <h3 className="card__name">{props.name}</h3>
+          <p className="card__slogan">{props.slogan}</p>
           <h3 className="card__descriptionTitle">Product description</h3>
-          <p className="card__description">{props.descProject}</p>
+          <p className="card__description">{props.desc}</p>
 
           <div className="card__technicalInfo">
             <p className="card__technologies">{props.technologies}</p>
 
             <a
               className="icon icon__www"
-              href={props.demoProject}
+              href={props.demo}
               title="Haz click para ver el proyecto online"
             >
               Web link
             </a>
             <a
               className="icon icon__github"
-              href={props.repoProject}
+              href={props.repo}
               title="Haz click para ver el código del proyecto"
             >
               GitHub link

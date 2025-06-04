@@ -6,14 +6,14 @@ function Card(props) {
       <section className="preview">
         <div className="projectImage"></div>
         <Preview
-          nameProject={props.nameProject}
-          sloganProject={props.sloganProject}
-          repoProject={props.repoProject}
-          demoProject={props.demoProject}
+          name={props.name}
+          slogan={props.slogan}
+          repo={props.repo}
+          demo={props.demo}
           technologies={props.technologies}
-          descProject={props.descProject}
-          authorProject={props.authorProject}
-          jobProject={props.jobProject}
+          desc={props.desc}
+          author={props.author}
+          job={props.job}
         />
       </section>
     </>
