@@ -72,8 +72,8 @@ function Form(props) {
           <input
             className="addForm__input"
             type="text"
-            name="autor"
-            id="autor"
+            name="author"
+            id="author"
             placeholder="Nombre"
             onInput={handleInput}
           />

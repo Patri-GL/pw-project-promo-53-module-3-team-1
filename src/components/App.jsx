@@ -29,26 +29,33 @@ function App() {
   // const [jobProject, setJobProject] = useState("Full stack Developer");
 
   const changeState = (field, value) => {
-    console.log("changestate(", field, value, ")");
-
-    if (field === "name") {
-      setData(value);
-    } else if (field === "slogan") {
-      setData(value);
-    } else if (field === "repo") {
-      setData(value);
-    } else if (field === "demo") {
-      setData(value);
-    } else if (field === "technologies") {
-      setData(value);
-    } else if (field === "desc") {
-      setData(value);
-    } else if (field === "autor") {
-      setData(value);
-    } else if (field === "job") {
-      setData(value);
-    }
+    setData((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
   };
+
+  // const changeState = (field, value) => {
+  //   console.log("changestate(", field, value, ")");
+
+  //   if (field === "name") {
+  //     setData(value);
+  //   } else if (field === "slogan") {
+  //     setData(value);
+  //   } else if (field === "repo") {
+  //     setData(value);
+  //   } else if (field === "demo") {
+  //     setData(value);
+  //   } else if (field === "technologies") {
+  //     setData(value);
+  //   } else if (field === "desc") {
+  //     setData(value);
+  //   } else if (field === "author") {
+  //     setData(value);
+  //   } else if (field === "job") {
+  //     setData(value);
+  //   }
+  // };
   //para añadir imágenes: https://github.com/Adalab/componente-react-de-foto-de-perfil
   return (
     <>
