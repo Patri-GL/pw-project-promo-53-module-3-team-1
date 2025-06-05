@@ -104,7 +104,7 @@ function Form(props) {
             Subir foto de la autora
             <input className="addForm__hidden" type="file" />
           </label>
-          <button className="button--large">Guardar proyecto</button>
+          <button onClick={handleSubmit}className="button--large">Guardar proyecto</button>
         </fieldset>
       </form>
     </>
