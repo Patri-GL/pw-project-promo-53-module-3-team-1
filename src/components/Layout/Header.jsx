@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import imgAdalab from "../../images/adalab.png";
 import imgLaptop from "../../images/laptop-code-solid.svg";
 
@@ -18,6 +19,12 @@ function Header() {
           <h1 className="header__title">Proyectos molones</h1>
         </a>
         <img className="logoSponsor" src={imgAdalab} alt="Logo Adalab" />
+
+        <menu>
+          <NavLink to="../">Inicio</NavLink>
+          <br />
+          <NavLink to="../create">Crea tu tarjeta</NavLink>
+        </menu>
       </header>
     </>
   );

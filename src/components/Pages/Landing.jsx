@@ -1,5 +1,11 @@
+import Hero from "../Layout/Hero";
 function Landing() {
-  return <></>;
+  return (
+    <>
+      {" "}
+      <Hero />
+    </>
+  );
 }
 
 export default Landing;
