@@ -5,6 +5,7 @@ import Header from "./Layout/Header";
 import Hero from "./Layout/Hero";
 import Card from "./Projects/Card";
 import Form from "./Projects/Form";
+import { Route, Routes, Link } from "react-router";
 
 function App() {
   const [data, setData] = useState(() => {

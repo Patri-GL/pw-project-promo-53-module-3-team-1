@@ -20,6 +20,7 @@ function Form(props) {
             name="name"
             id="name"
             placeholder="Nombre del proyecto"
+            value={props.data.name}
             onInput={handleInput}
           />
           <input
@@ -28,6 +29,7 @@ function Form(props) {
             name="slogan"
             id="slogan"
             placeholder="Slogan"
+            value={props.data.slogan}
             onInput={handleInput}
           />
           <div className="addForm__2col">
@@ -37,6 +39,7 @@ function Form(props) {
               name="repo"
               id="repo"
               placeholder="Repositorio"
+              value={props.data.repo}
               onInput={handleInput}
             />
             <input
@@ -45,6 +48,7 @@ function Form(props) {
               name="demo"
               id="demo"
               placeholder="Demo"
+              value={props.data.demo}
               onInput={handleInput}
             />
           </div>
@@ -54,6 +58,7 @@ function Form(props) {
             name="technologies"
             id="technologies"
             placeholder="Tecnologías"
+            value={props.data.technologies}
             onInput={handleInput}
           />
           <textarea
@@ -62,6 +67,7 @@ function Form(props) {
             name="desc"
             id="desc"
             placeholder="Descripción"
+            value={props.data.desc}
             rows="5"
             onInput={handleInput}
           ></textarea>
@@ -75,6 +81,7 @@ function Form(props) {
             name="author"
             id="author"
             placeholder="Nombre"
+            value={props.data.author}
             onInput={handleInput}
           />
           <input
@@ -83,6 +90,7 @@ function Form(props) {
             name="job"
             id="job"
             placeholder="Trabajo"
+            value={props.data.job}
             onInput={handleInput}
           />
         </fieldset>
