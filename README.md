@@ -1,6 +1,6 @@
 # Proyectos Molones
 
-Proyectos Molones website has been created as a team project of module 3, working with React, within the [Adalab](https://adalab.es/) context of the Web Programming Intensive Bootcamp. 
+[Proyectos Molones](https://patri-gl.github.io/pw-project-promo-53-module-3-team-1/) website has been created as a team project of module 3, working with React, within the [Adalab](https://adalab.es/) context of the Web Programming Intensive Bootcamp. 
 
 
 
@@ -40,6 +40,14 @@ SOFTWARE.
 ## Lessons Learned
 
 Use of React Library and deepening all previous knowledge on JS, HTML, Css. 
+Specific React lessons:
+- Events and State,
+- Components and Props,
+- Lifting,
+- Defining an Object,
+- Fetch and LocalStorage,
+- Router,
+- Change Control on Forms
 
 ## Tech Stack
 
