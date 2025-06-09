@@ -18,13 +18,13 @@ function Header() {
           />
           <h1 className="header__title">Proyectos molones</h1>
         </a>
-        <img className="logoSponsor" src={imgAdalab} alt="Logo Adalab" />
 
-        <menu>
+        <menu className="nav_Header">
           <NavLink to="../">Inicio</NavLink>
           <br />
           <NavLink to="../create">Crea tu tarjeta</NavLink>
         </menu>
+        <img className="logoSponsor" src={imgAdalab} alt="Logo Adalab" />
       </header>
     </>
   );
