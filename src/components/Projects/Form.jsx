@@ -1,3 +1,5 @@
+import GetAvatar from "../Pages/GetAvatar";
+
 function Form(props) {
   const handleInput = (ev) => {
     const field = ev.target.id;
@@ -96,14 +98,23 @@ function Form(props) {
         </fieldset>
 
         <fieldset className="addForm__group--upload">
-          <label className="button">
+          <GetAvatar
+            updateAvatar={props.updatePhoto}
+            text="Subir foto del proyecto"
+          />
+          <GetAvatar
+            updateAvatar={props.updateImage}
+            text="Subir foto de la autora"
+          />
+
+          {/*<label className="button">
             Subir foto del proyecto
             <input className="addForm__hidden" type="file" />
           </label>
           <label className="button">
             Subir foto de la autora
             <input className="addForm__hidden" type="file" />
-          </label>
+          </label>*/}
           <button onClick={props.handleSubmit} className="button--large">
             Guardar proyecto
           </button>

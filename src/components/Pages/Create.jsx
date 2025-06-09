@@ -31,6 +31,20 @@ function Create() {
     }));
   };
 
+  const updateImage = (newImage) => {
+    setData({
+      ...data,
+      image: newImage,
+    });
+  };
+
+  const updatePhoto = (newPhoto) => {
+    setData({
+      ...data,
+      photo: newPhoto,
+    });
+  };
+
   const handleSubmit = (ev) => {
     ev.preventDefault();
     console.log("Llamando al handleSubmit de mamá!");
@@ -62,8 +76,16 @@ function Create() {
         desc={data.desc}
         author={data.author}
         job={data.job}
+        photo={data.photo}
+        image={data.image}
       />
-      <Form data={data} changeState={changeState} handleSubmit={handleSubmit} />
+      <Form
+        data={data}
+        changeState={changeState}
+        handleSubmit={handleSubmit}
+        updateImage={updateImage}
+        updatePhoto={updatePhoto}
+      />
     </>
   );
 }

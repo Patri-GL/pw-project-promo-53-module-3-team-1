@@ -1,3 +1,5 @@
+import React from "react";
+
 function Preview(props) {
   return (
     <>
@@ -9,7 +11,12 @@ function Preview(props) {
         </h2>
 
         <div className="card__author">
-          <div className="card__authorPhoto"></div>
+          <div
+            className="card__authorPhoto"
+            style={{
+              backgroundImage: props.image ? `url(${props.image})` : null,
+            }}
+          ></div>
           <p className="card__job">{props.job}</p>
           <h3 className="card__name">{props.author || "Emmelie Bjôrklund"}</h3>
         </div>

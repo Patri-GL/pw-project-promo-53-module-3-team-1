@@ -4,7 +4,12 @@ function Card(props) {
   return (
     <>
       <section className="preview">
-        <div className="projectImage"></div>
+        <div
+          className="projectImage"
+          style={{
+            backgroundImage: props.photo ? `url(${props.photo})` : null
+          }}
+        ></div>
         <Preview
           name={props.name}
           slogan={props.slogan}
@@ -14,6 +19,7 @@ function Card(props) {
           desc={props.desc}
           author={props.author}
           job={props.job}
+          image={props.image}
         />
       </section>
     </>
