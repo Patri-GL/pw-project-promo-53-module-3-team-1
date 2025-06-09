@@ -18,8 +18,8 @@ function Create() {
           desc: "",
           author: "",
           job: "",
-          photo: "https://placehold.co/210x300/ffffff/555555?text=TV",
-          image: "https://placehold.co/210x300/ffffff/555555?text=TV",
+          photo: "",
+          image: "",
         };
   });
 
