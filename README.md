@@ -12,6 +12,9 @@
 - [@paulactc](https://github.com/Cipactlicasillas)
 
 
+## Project Management
+
+[Kanban](https://github.com/users/Patri-GL/projects/8/views/1)
 
 ## License
 MIT License
